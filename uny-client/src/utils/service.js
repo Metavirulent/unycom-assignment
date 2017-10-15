@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const BASE_URL = "http://localhost:8080";
+const { REACT_APP_UNY_SERVICE } = process.env;
+const BASE_URL = REACT_APP_UNY_SERVICE || "http://localhost:8080";
 
 let getCustomers = () => {
     const url = BASE_URL + "/customers";

@@ -9,8 +9,7 @@ import {
     TableCell,
     TableBody,
     Button,
-    Icon,
-    Badge
+    Icon
 } from 'material-ui';
 import {Link} from 'react-router-dom';
 import {getCustomerWithOrders} from "../utils/service";
@@ -56,7 +55,8 @@ class Customer extends Component {
                             Code: {this.state.customer.code}
                         </Typography>
                         <Typography type="body1" component="p">
-                            Name: {this.state.customer.name} {this.state.customer.type === "VIP" ? <Icon color="accent">star</Icon> : ''}
+                            Name: {this.state.customer.name} {this.state.customer.type === "VIP" ?
+                            <Icon color="accent">star</Icon> : ''}
                         </Typography>
                         <Typography type="body1" component="p">
                             Location: {this.state.customer.location}
