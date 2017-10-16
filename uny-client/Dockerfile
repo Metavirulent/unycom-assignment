@@ -1,6 +1,6 @@
 FROM node:slim as BUILD
 
-ENV REACT_APP_UNY_SERVICE https://uny-service.alioktay.org
+ARG REACT_APP_UNY_SERVICE=https://uny-service.alioktay.org
 
 WORKDIR /app
 COPY package.json /app

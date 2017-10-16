@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Grid, Paper, Typography, Icon, Button} from 'material-ui';
 import {Link} from 'react-router-dom';
+import Moment from 'react-moment';
 import {getOrder} from "../utils/service";
 import {calculateFinalPrice} from "../utils/calculation";
 
@@ -40,13 +41,15 @@ class Order extends Component {
                             ID: {this.state.order.id}
                         </Typography>
                         <Typography type="body1" component="p">
-                            Order Date: {this.state.order.orderDate}
+                            Order Date: <Moment date={this.state.order.orderDate} format={"DD/MM/YYYY HH:mm:ss"}/>
                         </Typography>
                         <Typography type="body1" component="p">
-                            Confirmation Date: {this.state.order.confirmationDate}
+                            Confirmation Date: <Moment date={this.state.order.confirmationDate}
+                                                       format={"DD/MM/YYYY HH:mm:ss"}/>
                         </Typography>
                         <Typography type="body1" component="p">
-                            Completion Date: {this.state.order.completionDate}
+                            Completion Date: <Moment date={this.state.order.completionDate}
+                                                     format={"DD/MM/YYYY HH:mm:ss"}/>
                         </Typography>
                         <Typography type="body1" component="p">
                             Product: {this.state.order.product}
